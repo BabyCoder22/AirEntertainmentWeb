@@ -1,0 +1,386 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+        * {
+            box-sizing: border-box;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            min-height: 100vh;
+            position: relative;
+        }
+
+            header .container {
+                max-width: 1368px;
+                margin: 0 auto;
+                padding: 1rem 2rem;
+            }
+
+                header .container .navbar {
+                    min-height: 10vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                    header .container .navbar .logo {
+                        font-size: 2.25rem;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        color: #fff;
+                        font-weight: 700;
+                    }
+
+                    header .container .navbar .nav-links {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                        header .container .navbar .nav-links li {
+                            list-style-type: none;
+                        }
+
+                            header .container .navbar .nav-links li a {
+                                text-decoration: none;
+                                color: #fff;
+                                margin: 0 1.25rem;
+                                font-weight: 500;
+                                font-size: 1.05rem;
+                                position: relative;
+                            }
+
+                                header .container .navbar .nav-links li a::after {
+                                    position: absolute;
+                                    content: "";
+                                    background-color: #fff;
+                                    bottom: -5px;
+                                    left: 0;
+                                    width: 0%;
+                                    height: 3px;
+                                    transition: 0.3s ease all;
+                                }
+
+                                header .container .navbar .nav-links li a:hover::after {
+                                    width: 100%;
+                                }
+
+                        header .container .navbar .nav-links button {
+                            border: none;
+                            outline: none;
+                            cursor: pointer;
+                            padding: 0.75rem 1rem;
+                            margin: 0 1rem;
+                            border-radius: 6px;
+                            background: transparent;
+                            border: 2px solid #fff;
+                            color: #fff;
+                            font-weight: 500;
+                        }
+
+                    header .container .navbar i {
+                        display: none;
+                        color: #fff;
+                        cursor: pointer;
+                    }
+
+                header .container .showcase {
+                    min-height: 80vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    width: 35rem;
+                }
+
+                    header .container .showcase h1 {
+                        color: #fff;
+                        font-size: 2.5rem;
+                        margin-bottom: 0;
+                        font-weight: 700;
+                        margin-bottom: 1rem;
+                    }
+
+                    header .container .showcase p {
+                        margin-top: 0;
+                        color: #fff;
+                        font-weight: 500;
+                        line-height: 1.4;
+                        font-size: 0.9rem;
+                        width: 30rem;
+                    }
+
+                    header .container .showcase button {
+                        margin-top: 1rem;
+                        background-color: #000;
+                        color: #fff;
+                        border: none;
+                        outline: none;
+                        padding: 1rem 1.5rem;
+                        font-size: 0.9rem;
+                        border-radius: 6px;
+                        cursor: pointer;
+                    }
+
+            header .video-container {
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 100vw;
+            }
+
+                header .video-container video {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                header .video-container::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgba(0, 0, 0, 0.82);
+                }
+
+        @media (max-width: 850px) {
+            header .container .navbar .nav-links {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #fff;
+                height: 100%;
+                width: 225px;
+                margin: 0;
+                padding: 0;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                transform: translateX(-100%);
+                transition: 0.4s ease all;
+                z-index: 10;
+            }
+
+                header .container .navbar .nav-links li a {
+                    color: #000;
+                }
+
+                    header .container .navbar .nav-links li a::after {
+                        background-color: #000;
+                    }
+
+                header .container .navbar .nav-links button {
+                    border-color: #000;
+                    color: #000;
+                    padding: 0.75rem 1.5rem;
+                }
+
+                header .container .navbar .nav-links.active {
+                    transform: translateX(0%);
+                }
+
+            header .container .navbar i {
+                display: block;
+            }
+
+            header .container .showcase {
+                min-height: 80vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                text-align: center;
+            }
+
+                header .container .showcase h1 {
+                    font-size: 2.25rem;
+                }
+        }
+
+        @media (max-width: 500px) {
+            header .container .showcase h1 {
+                font-size: 2.1rem;
+            }
+
+            header .container .showcase p {
+                font-size: 0.85rem;
+                width: 300px;
+            }
+        }
+
+        .panel {
+            padding-bottom: 10px;
+        }
+
+        #cam {
+            border: 1px;
+            border-color: black;
+            border-style: solid;
+        }
+
+        #photo {
+            border: 1px;
+            border-color: black;
+            border-style: dashed;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">AFRICA AIRWAYS</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="series.html">Series</a></li>
+                    <li><a href="https://planefinder.net/">Flight Tracker</a></li>
+                    <button id="switchFrontBtn">Flight View</button>
+                    
+                </ul>
+                <i class="fas fa-bars fa-2x" id="burger"></i>
+            </nav>
+            <section class="showcase">
+                <h1>Enjoy our flight Entertainment</h1>
+                <p>Expereince our new flight entertainment where you can watch multiple movies and series or shows for free</p>
+            
+
+            </section>
+        </div>
+
+        <div style="width:100%">
+            <!-- add autoplay muted playsinline for iOS -->
+            <video id="cam" autoplay muted playsinline>Not available</video>
+            <canvas id="canvas" style="display:none"></canvas>
+           
+        </div>
+        
+
+        <div class="video-container">
+            <video src="VIDEO-BACKGROUND.mp4" autoplay loop muted></video>
+        </div>
+
+    </header>
+    <script>
+        var mediaStream = null;
+
+        // Prefer camera resolution nearest to 1280x720.
+        var constraints = {
+            audio: false,
+            video: {
+                width: { ideal: 640 },
+                height: { ideal: 480 },
+                facingMode: "environment"
+            }
+        };
+
+        async function getMediaStream(constraints) {
+            try {
+                mediaStream = await navigator.mediaDevices.getUserMedia(constraints);
+                let video = document.getElementById('cam');
+                video.srcObject = mediaStream;
+                video.onloadedmetadata = (event) => {
+                    video.play();
+                };
+            } catch (err) {
+                console.error(err.message);
+            }
+        };
+
+        async function switchCamera(cameraMode) {
+            try {
+                // stop the current video stream
+                if (mediaStream != null && mediaStream.active) {
+                    var tracks = mediaStream.getVideoTracks();
+                    tracks.forEach(track => {
+                        track.stop();
+                    })
+                }
+
+                // set the video source to null
+                document.getElementById('cam').srcObject = null;
+
+                // change "facingMode"
+                constraints.video.facingMode = cameraMode;
+
+                // get new media stream
+                await getMediaStream(constraints);
+            } catch (err) {
+                console.error(err.message);
+                alert(err.message);
+            }
+        }
+
+        function takePicture() {
+            let canvas = document.getElementById('canvas');
+            let video = document.getElementById('cam');
+            let photo = document.getElementById('photo');
+            let context = canvas.getContext('2d');
+
+            const height = video.videoHeight;
+            const width = video.videoWidth;
+
+            if (width && height) {
+                canvas.width = width;
+                canvas.height = height;
+                context.drawImage(video, 0, 0, width, height);
+                var data = canvas.toDataURL('image/png');
+                photo.setAttribute('src', data);
+            } else {
+                clearphoto();
+            }
+        }
+
+        function clearPhoto() {
+            let canvas = document.getElementById('canvas');
+            let photo = document.getElementById('photo');
+            let context = canvas.getContext('2d');
+
+            context.fillStyle = "#AAA";
+            context.fillRect(0, 0, canvas.width, canvas.height);
+            var data = canvas.toDataURL('image/png');
+            photo.setAttribute('src', data);
+        }
+
+        document.getElementById('switchFrontBtn').onclick = (event) => {
+            switchCamera("user");
+        }
+
+        document.getElementById('switchBackBtn').onclick = (event) => {
+            switchCamera("environment");
+        }
+
+        document.getElementById('snapBtn').onclick = (event) => {
+            takePicture();
+            event.preventDefault();
+        }
+
+        clearPhoto();
+    </script>
+
+    <script>
+        const burger = document.getElementById('burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        })
+    </script>
+</body>
+</html>

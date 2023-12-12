@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Awesome Movie Playlist</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 30px; /* Increased gap for more spacing */
+            justify-content: flex-start;
+            padding: 20px;
+            background-color: #121212;
+            color: #ffffff;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+
+        .movie-container {
+            flex: 0 0 auto;
+            margin-bottom: 30px; /* Increased margin at the bottom for more spacing */
+            scroll-snap-align: start;
+            width: 340px; /* Increased container size */
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            border: 2px solid #ffffff;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px; /* Added margin at the bottom to separate text from video */
+            font-size: 1.5em;
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center">Series</h1>
+    <h3 style="text-align:center">Please note that this is just for display and is not an active flight entertainment webstite. I just built 
+    this so tat it can be part of my portfolio</h3>
+    <div class="movie-container">
+        <video controls>
+            <source src="https://youtu.be/4Oc4I_cYpC8" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <h1>Rick and Morty Season 07 Ep 10 Full Episodes </h1>
+    </div>
+
+    <div class="movie-container">
+        <video controls>
+            <source src="https://youtu.be/FIFyB6PeiQE" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <h1>The Simpsons Season 33 Ep.13 Full Episode </h1>
+    </div>
+
+    <div class="movie-container">
+        <video controls>
+            <source src="https://youtu.be/eKBGcQfp1DI" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <h1>Race to the Mexican border | Top Gear Series 19 </h1>
+    </div>
+
+    <div class="movie-container">
+        <video controls>
+            https://youtu.be/i-Co8is35C4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <h1>SpongeBob SquarePants Season 14 Episode 02 </h1>
+    </div>
+
+
+
+
+</body>
+</html>

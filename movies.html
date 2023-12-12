@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Awesome Movie Playlist</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 30px; /* Increased gap for more spacing */
+            justify-content: flex-start;
+            padding: 20px;
+            background-color: #121212;
+            color: #ffffff;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+
+        .movie-container {
+            flex: 0 0 auto;
+            margin-bottom: 30px; /* Increased margin at the bottom for more spacing */
+            scroll-snap-align: start;
+            width: 340px; /* Increased container size */
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            border: 2px solid #ffffff;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px; /* Added margin at the bottom to separate text from video */
+            font-size: 1.5em;
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <div class="movie-container">
+        <video controls>
+            <source src="Movie/Alita Battle Angel (2019) (NetNaija.com).mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <h1>Alita Battle Angel (2019)</h1>
+    </div>
+
+    <div class="movie-container">
+        <video controls>
+            <source src="Movie/Army of the Dead (2021) (NetNaija.com).mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <h1>Army of the Dead (2021)</h1>
+    </div>
+
+    <div class="movie-container">
+        <video controls>
+            <source src="Movie/Fast & Furious Presents Hobbs & Shaw (2019) (NetNaija.com).mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <h1>Fast & Furious Presents Hobbs & Shaw</h1>
+    </div>
+
+    <div class="movie-container">
+        <video controls>
+            <source src="Movie/Bullet Train (2022) (NetNaija.com).mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <h1>Bullet Train (2022)</h1>
+    </div>
+
+    <div class="movie-container">
+        <video controls>
+            <source src="Movie/End of the Road (2022) (NetNaija.com).mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <h1>End of the Road (2022)</h1>
+    </div>
+
+    <div class="movie-container">
+        <video controls>
+            <source src="Movie/The SpongeBob Movie Sponge on the Run (2020) (NetNaija.com).mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <h1>The SpongeBob Movie Sponge on the Run (2020)</h1>
+    </div>
+
+    <div class="movie-container">
+        <video controls>
+            <source src="Movie/The Suicide Squad (2021) (NetNaija.com).mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <h1>The Suicide Squad (2021)</h1>
+    </div>
+
+    <div class="movie-container">
+        <video controls>
+            <source src="Movie/The Super Mario Bros. Movie (20233) (NetNaija.com).mkv" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <h1>The Super Mario Bros. Movie (20233)</h1>
+    </div>
+
+    <div class="movie-container">
+        <video controls>
+            <source src="Movie/Day Shift (2022) (NetNaija.com).mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <h1>Day Shift (2022))</h1>
+    </div>
+
+    <div class="movie-container">
+        <video controls>
+            <source src="Movie/Death_at_a_Funeral_2010_(2010)_BluRay_720p_(fzmovies.net)_d52fe77566a245d2d3cd4ec17224aebe.mkv" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <h1>Death at a Funeral</h1>
+    </div>
+
+
+</body>
+</html>
+
+
